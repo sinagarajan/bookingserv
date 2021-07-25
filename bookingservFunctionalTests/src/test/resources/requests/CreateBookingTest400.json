@@ -1,0 +1,17 @@
+{
+  "first_name": "",
+  "last_name": "",
+  "dob": "18/1987",
+  "totalPrice": -1,
+  "checkin":"2021-10-10T12:00:00-0700",
+  "checkout":"2021-10-21T12:00:00-0700",
+  "deposit": -2,
+  "address": {
+    "line1": "",
+    "line2": "md",
+    "city": "chennai",
+    "state": "tn",
+    "country": "India",
+    "zipcode": "600100"
+  }
+}

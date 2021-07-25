@@ -1,0 +1,7 @@
+version: '2'
+services:
+  bookingserv:
+    container_name: bookingserv
+    image: sinagarajan/bookingserv:2.2
+    ports:
+      - "8080:8080"

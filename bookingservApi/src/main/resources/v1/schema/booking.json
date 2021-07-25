@@ -1,0 +1,66 @@
+{
+  "title": "Booking resource",
+  "description": "Booking resource object",
+  "type": "object",
+  "properties": {
+    "id": {
+      "description": "Booking id",
+      "type": "integer"
+    },
+    "first_name": {
+      "description": "First name",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "last_name": {
+      "description": "Last name",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255
+    },
+    "dob": {
+      "description": "Date of Birth",
+      "type": "string",
+      "format": "date",
+      "customPattern": "yyyy/MM/dd",
+      "pattern": "([0-2][0-9]|3[0-1])\/(0[1-9]|1[0-2])\/[0-9]{4}"
+    },
+    "checkin": {
+      "description": "Checkin Time",
+      "type": "string",
+      "format": "date-time",
+      "customPattern": "yyyy-MM-dd'T'HH:mm:ssZ",
+      "customTimezone": "PST"
+     },
+    "checkout": {
+      "description": "CheckOut Time",
+      "type": "string",
+      "format": "date-time",
+      "customPattern": "yyyy-MM-dd'T'HH:mm:ssZ",
+      "customTimezone": "PST"
+    },
+    "totalPrice": {
+      "description": "Total Price",
+      "type": "integer",
+      "minimum":0
+    },
+    "deposit": {
+      "description": "Deposit",
+      "type": "integer",
+      "minimum":0
+    },
+    "address": {
+      "description": "Address",
+      "type": "object",
+      "javaType": "com.paypal.bfs.test.bookingserv.api.model.Address"
+    }
+   },
+  "required": [
+    "first_name",
+    "last_name",
+    "dob",
+    "checkin",
+    "checkout"
+  ]
+}
